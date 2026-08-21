@@ -52,7 +52,6 @@ import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import twilightforest.network.PacketDistributor;
 import org.jetbrains.annotations.Nullable;
 import twilightforest.block.LightableBlock;
 import twilightforest.block.OminousCandleBlock;
@@ -63,6 +62,7 @@ import twilightforest.entity.ai.goal.*;
 import twilightforest.entity.monster.LichMinion;
 import twilightforest.entity.projectile.LichBomb;
 import twilightforest.init.*;
+import twilightforest.network.PacketDistributor;
 import twilightforest.network.ParticlePacket;
 import twilightforest.util.entities.EntityUtil;
 
@@ -475,7 +475,7 @@ public class Lich extends BaseTFBoss {
 
 					PacketDistributor.sendToPlayersTrackingEntity(this, particlePacket);
 
-					clone.remove(RemovalReason.DISCARDED);
+					clone.remove(Entity.RemovalReason.DISCARDED);
 				}
 			}
 		}
@@ -577,8 +577,8 @@ public class Lich extends BaseTFBoss {
 			if (this.teleportToSightOfEntity(target)) {
 				for (Lich clone : this.getAllClones()) {
 					clone.setTarget(target);
-                    clone.teleportToSightOfEntity(target);
-                }
+					clone.teleportToSightOfEntity(target);
+				}
 				if (lichShadowsGoal != null) lichShadowsGoal.checkAndSpawnClones(target);
 				return true;
 			}
