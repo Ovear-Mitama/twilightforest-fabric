@@ -45,6 +45,7 @@
     "SlimeBlockMixin",
     "SnowyDirtBlockMixin",
     "StructureStartMixin",
+    "Item$TooltipContext$2Accessor",
     "UtilMixin",
     "WalkNodeEvaluatorMixin",
     "WoodTypeAccessor",
@@ -65,7 +66,6 @@
     "MapInstanceMixin",
     "MinecraftMixin",
     "ModelBakeryMixin",
-    "ShaderInstanceMixin",
     "SplashRendererMixin"
   ],
   "injectors": {
