@@ -89,7 +89,7 @@ public class LichBomb extends TFThrowable {
 	}
 
 	@Override
-	protected void onHit(HitResult result) {
+	public void onHit(HitResult result) {
 		super.onHit(result);
 		this.explode();
 	}

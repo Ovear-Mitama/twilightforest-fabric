@@ -91,7 +91,7 @@ public class HydraMortar extends ThrowableProjectile {
 	}
 
 	@Override
-	protected void onHit(HitResult result) {
+	public void onHit(HitResult result) {
 		HitResult.Type hitresult$type = result.getType();
 		if (hitresult$type == HitResult.Type.ENTITY) {
 			this.onHitEntity((EntityHitResult) result);

@@ -91,7 +91,7 @@ public class NatureBolt extends TFThrowable implements ITFProjectile, ItemSuppli
 	}
 
 	@Override
-	protected void onHit(HitResult result) {
+	public void onHit(HitResult result) {
 		super.onHit(result);
 		if (!this.level().isClientSide()) {
 			this.level().broadcastEntityEvent(this, (byte) 3);

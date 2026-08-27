@@ -61,7 +61,7 @@ public class SlimeProjectile extends TFThrowable implements ItemSupplier {
 	}
 
 	@Override
-	protected void onHit(HitResult result) {
+	public void onHit(HitResult result) {
 		super.onHit(result);
 		this.die();
 	}
