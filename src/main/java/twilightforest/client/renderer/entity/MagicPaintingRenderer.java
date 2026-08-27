@@ -78,7 +78,7 @@ public class MagicPaintingRenderer extends EntityRenderer<MagicPainting, MagicPa
 			double heightFactor = 1.0D / (double) heightAsBlock;
 
 			for (MagicPaintingVariant.Layer layer : state.variant.layers()) {
-				float alpha = this.getAlpha(layer.opacityModifier(), state, cameraState, state.partialTick);
+				float alpha = this.getAlpha(layer.opacityModifier(), state, cameraState, Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(false));
 				if (alpha <= 0.0F) continue;
 
 				Parallax parallax = layer.parallax();
