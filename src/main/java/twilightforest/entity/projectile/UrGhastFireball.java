@@ -28,7 +28,7 @@ public class UrGhastFireball extends LargeFireball implements ITFProjectile {
 
 	//[VanillaCopy] of Projectile.onHit. We don't want fireballs to explode no matter what they hit, which is what LargeFireball.onHit does
 	@Override
-	protected void onHit(HitResult pResult) {
+	public void onHit(HitResult pResult) {
 		HitResult.Type hitresult$type = pResult.getType();
 		if (hitresult$type == HitResult.Type.ENTITY) {
 			this.onHitEntity((EntityHitResult) pResult);

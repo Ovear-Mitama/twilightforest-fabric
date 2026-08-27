@@ -68,7 +68,7 @@ public class TomeBolt extends TFThrowable implements ItemSupplier {
 	}
 
 	@Override
-	protected void onHit(HitResult result) {
+	public void onHit(HitResult result) {
 		if (this.getOwner() != null && result instanceof BlockHitResult blockHitResult &&
 			this.getOwner().blockPosition().equals(blockHitResult.getBlockPos()) &&
 			this.level().getBlockState(blockHitResult.getBlockPos()).getBlock() instanceof LecternBlock) {
